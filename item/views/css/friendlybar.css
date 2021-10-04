@@ -1,0 +1,11 @@
+.friendlybar{
+    margin-bottom: 30px;
+}
+.friendlybar .friendly-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.friendlybar .friendly-link img{
+    width: 120px;
+}

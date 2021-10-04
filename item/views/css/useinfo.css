@@ -1,0 +1,336 @@
+.userinfo_part{
+    background-color: #ddd;
+    height: 500px;
+}
+.userinfo_part .usebox{
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.userinfo_part .usebox .box_left{
+    width: 180px;
+    height: 400px;
+    background-color: #ececec;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.userinfo_part .usebox .box_left .navbox{
+    width: 96%;
+    height: 96%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 4%;
+}
+.userinfo_part .usebox .box_left .navbox ul{
+    width: 100%;
+    position: relative;
+    top: 10px;
+}
+.userinfo_part .usebox .box_left .navbox ul li:first-child{
+    height: 70px;
+    margin-left: 5px;
+}
+.userinfo_part .usebox .box_left .navbox ul li:nth-child(n+2){
+    height: 50px;
+    text-align: center;
+    margin-left: 5px;
+    border-left: 1px solid #EBEBEB;
+    /* line-height: 50px; */
+    border-bottom:1px dashed #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userinfo_part .usebox .box_left .navbox ul li:nth-child(n+2) img{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.userinfo_part .usebox .box_left .navbox ul li:nth-child(3) img{
+    margin-left: -18px;
+}
+.userinfo_part .usebox .box_left .navbox ul li:nth-child(n+2) span{
+    cursor: pointer;
+}
+.userinfo_part .usebox .box_right{
+    width: 700px;
+    height: 400px;
+    margin-left: 50px;
+}
+.userinfo_part .usebox .box_right strong{
+    color: red;
+}
+.userinfo_part .usebox .box_right table{
+    width: 100%;
+    text-align: center;
+}
+.userinfo_part .usebox .box_right table tr td:first-child{
+    text-align: right;
+    width: 200px;
+}
+.userinfo_part .usebox .box_right table tr:first-child td:nth-child(2){
+    color: red;
+}
+.userinfo_part .usebox .box_right table tr:last-child td:nth-child(2){
+    color: red;
+}
+.userinfo_part .usebox .box_right table tr td:nth-child(2){
+    text-align: left;
+}
+.userinfo_part .usebox .box_right table tr td{
+    height: 30px;
+}
+.userinfo_part .usebox .box_right table tr td input{
+	line-height: 30px;
+	border: 1px #f90 solid;
+	border-radius: 10px;
+    padding-left: 10px;
+	outline: none;
+}
+.userinfo_part .usebox .box_right .submit{
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 30px;
+}
+.userinfo_part .usebox .box_right .submit button{
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+.userinfo_part .usebox .box_right .submit button:first-child{
+    margin-left: 100px;
+}
+.userinfo_part .usebox .box_right2{
+    height: 500px;
+    width: 70%;
+    /* background-color: #000; */
+    margin-left: 50px;
+}
+.userinfo_part .usebox .box_right2 .topbuy{
+    position: relative;
+}
+.userinfo_part .usebox .box_right2 .topbuy span{
+    width: 70px;
+    display: block;
+    position: absolute;
+}
+.userinfo_part .usebox .box_right2 .topbuy span:nth-child(2){
+    top: 14px;
+    left: 215px;
+}
+.userinfo_part .usebox .box_right2 .topbuy span:nth-child(3){
+    top: 14px;
+    left: 340px;
+    color: #fff;
+    font-weight: 600;
+}
+.userinfo_part .usebox .box_right2 .topbuy span:nth-child(4){
+    top: 14px;
+    left: 460px;
+}
+.userinfo_part .usebox .box_right2 .shoplist{
+    width: 100%;
+    height: 70%;
+    border: 1px solid #ddd;
+}
+.userinfo_part .usebox .box_right2 .shoplist table{
+    width: 100%;
+}
+.userinfo_part .usebox .box_right2 .shoplist table td{
+    text-align: center;
+}
+.userinfo_part .usebox .box_right2 .shoplist table tbody td{
+    background-color: #FAFAFA;
+}
+.userinfo_part .usebox .box_right2 .shoplist table tbody td button{
+    background-color: #ccc;
+    width: 30px;
+    cursor: pointer;
+}
+.userinfo_part .usebox .box_right2 .shoplist table tbody td input{
+    width: 30px;
+    background-color: #fff;
+    text-align: center;
+}
+.userinfo_part .usebox .box_right2 .shoplist table tbody td a{
+    width: 12px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    cursor: pointer;
+}
+.userinfo_part .usebox .box_right2 .shoplist table tbody td{
+    white-space: wrap;
+}
+.userinfo_part .usebox .box_right2 .shoplist table tbody td img{
+    width: 30px;
+}
+.userinfo_part .usebox .box_right2 .shoplist table tfoot td{
+    background-color: #ccc; 
+}
+.userinfo_part .usebox .box_right2 .shoplist table tfoot tr td:first-child{
+    text-align: right;
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td{
+    background-color: #ccc; 
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td:first-child{
+    width: 50px;
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td:nth-child(2){
+    width: 100px;
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td:nth-child(3){
+    width: 120px;
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td:nth-child(4){
+    width: 150px;
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td:nth-child(5){
+    width: 50px;
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td:nth-child(6){
+    width: 70px;
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td:nth-child(7){
+    width: 70px;
+}
+.userinfo_part .usebox .box_right2 .shoplist thead td:nth-child(8){
+    width: 50px;
+}
+.userinfo_part .usebox .box_right2 .back_money{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.userinfo_part .usebox .box_right2 .back_money img{
+    vertical-align: middle;
+}
+.userinfo_part .usebox .box_right2 .back_money span{
+    cursor: pointer;
+}
+.userinfo_part .usebox .box_right2 .back_money div{
+    font-size: 12px;
+    width: 200px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 0;
+}
+.userinfo_part .usebox .box_right2 .shoplist .footbutton{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.userinfo_part .usebox .box_right2 .shoplist .footbutton img{
+    display: block;
+}
+.userinfo_part .usebox .box_right3{
+    height: 400px;
+}
+.userinfo_part .usebox .box_right3 table{
+    width: 100%;
+    margin-left: 10px;
+}
+.userinfo_part .usebox .box_right3 table td{
+    text-align: center;
+    background-color: #FAFAFA;
+}
+.userinfo_part .usebox .box_right3 table tbody td{
+    background-color: #FAFAFA;
+}
+.userinfo_part .usebox .box_right3 table tbody td{
+    white-space: wrap;
+}
+.userinfo_part .usebox .box_right3 table tbody td img{
+    width: 30px;
+}
+.userinfo_part .usebox .box_right3 thead td{
+    background-color: #ccc; 
+}
+.userinfo_part .usebox .box_right3 thead td:first-child{
+    width: 50px;
+}
+.userinfo_part .usebox .box_right3 thead td:nth-child(2){
+    width: 100px;
+}
+.userinfo_part .usebox .box_right3 thead td:nth-child(3){
+    width: 120px;
+}
+.userinfo_part .usebox .box_right3 thead td:nth-child(4){
+    width: 150px;
+}
+.userinfo_part .usebox .box_right3 thead td:nth-child(n+5){
+    width: 80px;
+}
+.userinfo_part .usebox .box_right4{
+    width: 700px;
+    height: 400px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userinfo_part .usebox .box_right4 .updatebox{
+    width: 560px;
+    height: 250px;
+    border: 1px solid #5BD77D;
+}
+.userinfo_part .usebox .box_right4 .updatebox .title{
+    width: 100%;
+    height: 25px;
+    background-color: #5BD77D;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+.userinfo_part .usebox .box_right4 table{
+    margin: 0 auto;
+}
+.userinfo_part .usebox .box_right4 table td{
+    height: 40px;
+    position: relative;
+}
+.userinfo_part .usebox .box_right4 table td:first-child{
+    text-align: right;
+}
+.userinfo_part .usebox .box_right4 table td:last-child{
+    color: red;
+}
+.userinfo_part .usebox .box_right4 table td input{
+    width: 150px;
+	height: 25px;
+	line-height: 40px;
+	border: 1px #f90 solid;
+	border-radius: 10px;
+	/* letter-spacing: 2px; */
+    padding-left: 10px;
+	outline: none;
+}
+.userinfo_part .usebox .box_right4 table td img{
+    position: absolute;
+    top: 10px;
+    left: 135px;
+}
+.userinfo_part .usebox .box_right4 .submit{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.userinfo_part .usebox .box_right4 .submit button{
+    width: 100px;
+    height: 36px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}

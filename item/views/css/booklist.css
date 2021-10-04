@@ -1,0 +1,124 @@
+.booklist-part{
+  /* height: 700px; */
+  margin-top: 50px;
+}
+.booklist-part .tushu{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  /* margin-left: 30px; */
+  border-bottom: 2px solid #ccc;
+}
+.booklist-part .tushu img{
+  width: 32px;
+  vertical-align: middle;
+  padding-right: 20px;
+  border-bottom: 2px solid #023d72;
+}
+.booklist-part .tushu span{
+  font-size: 20px;
+  border-bottom: 2px solid #023d72;
+  line-height: 32px;
+}
+.booklist-part .newbooktitle{
+  margin-left: 30px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.booklist-part .newbooktitle img{
+  width: 32px;
+  vertical-align: middle;  
+}
+.booklist-part .newbooktitle span{
+  font-size: 16px;
+  margin-left: 5px;
+  color: #135096;
+}
+.booklist-part .newbooklist ul{
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.booklist-part .newbooklist ul li img{
+  width: 150px;
+  height: 213px;
+  /* margin-top: 20px; */
+  overflow: hidden;
+  display: block;
+}
+.booklist-part .newbooklist ul li{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.booklist-part .newbooklist ul li .bookjs{
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  top: 100%;
+  background-color: rgba(0,0,0,0.2);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  color: aqua;
+}
+.booklist-part .newbooklist ul li .bookjs p{
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.booklist-part .newbooklist ul li .bookjs p:nth-child(1){
+  top: 10px;
+  left: -70px;
+}
+.booklist-part .newbooklist ul li .bookjs p:nth-child(2){
+  top: 30px;
+  left: 70px;
+}
+.booklist-part .newbooklist ul li .bookjs p:nth-child(3){
+  top: 50px;
+  left: -70px;
+}
+.booklist-part .newbooklist ul li .bookjs p:nth-child(4){
+  top: 70px;
+  left: 70px;
+  color: gold;
+}
+.booklist-part .newbooklist ul li img:hover+.bookjs{
+  top: 58%;
+  transition: 1s;
+}
+.booklist-part .newbooklist ul li img:hover+.bookjs p{
+  left: 0;
+  transition: 2s;
+}
+.booklist-part .newbooklist ul li .bookjs:hover p{
+  left: 0;
+  transition: 2s;
+}
+.booklist-part .newbooklist ul li .bookjs:hover{
+  top: 58%;
+  transition: 1s;
+}
+.booklist-part .newbooklist ul li img:hover{
+  transform: scale(1.1);
+}
+.img-part{
+  margin-top: 30px;
+}
+.img-part .imgbox{
+  display: flex;
+  justify-content: space-between;
+}
+.img-part .imgbox img{
+  width: 500px;
+  display: block;
+}

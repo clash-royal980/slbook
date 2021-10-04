@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/adcontrol.css">
+</head>
+<body>
+    <div class="top-bar" id="adinfo"></div>
+    <div class="tophr-bar"></div>
+    <div class="bodybox-part">
+        <div class="bodyleft">
+            <ul>
+                <li class="active">
+                    网站常规管理
+                    <div>
+                        <img src="../img/admin/menu_topline.gif" alt="">
+                        <ol>
+                            <li>基本设置</li>
+                            <li>页尾信息</li>
+                            <li>其他设置</li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    商品信息管理
+                    <div>
+                        <img src="../img/admin/menu_topline.gif" alt="">
+                        <ol>
+                            <li><a>查找商品</a></li>
+                            <li><a>删除商品</a></li>
+                            <li><a>修改商品</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    订单信息管理
+                    <div>
+                        <img src="../img/admin/menu_topline.gif" alt="">
+                        <ol>
+                            <li><a>查找订单</a></li>
+                            <li><a>删除订单</a></li>
+                            <li><a>完成订单</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    用户信息管理
+                    <div>
+                        <img src="../img/admin/menu_topline.gif" alt="">
+                        <ol>
+                            <li><a>查找用户</a></li>
+                            <li><a>删除用户</a></li>
+                            <li><a>添加用户</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    管理员信息
+                    <div>
+                        <img src="../img/admin/menu_topline.gif" alt="">
+                        <ol>
+                            <li><a>查找管理员</a></li>
+                            <li><a>添加管理员</a></li>
+                            <li><a>修改信息</a></li>
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bodyright">
+            <div class="boxwelcome">
+                <p>感谢您使用三联后台系统</p>
+                <p><img src="../img/admin/ts.gif" alt="">提示</p>
+                <p> 1、您现在使用的是三联书店开发的用于企业及个人网上开店的后台系统！</p>
+                <p> 2、本软件受国际版权法保护，任何单位或个人对本软件进行盗版复制，必追究其法律责任!</p>
+                <p> 3、软件著作权证书登记号:2014SR001852 软著登字第0671096号　</p>
+                <p> 4、三联书店客户服务电话：0311－84215152　13102888321　客服QQ：1324703505</p>
+                <hr>
+                <div class="foot">
+                    <div>
+                        <img src="../img/admin/icon-mail2.gif" alt="">
+                        <span>客户服务邮箱：slshop@136.com 客服电话：0511-853515862</span>
+                    </div>
+                    <div>
+                        <img src="../img/admin/icon-phone.gif" alt="">
+                        <span>官方网站:https://www.tmooc.cn/</span>
+                    </div>
+                </div>
+            </div>
+            <div class="shop_select" style="display: none;">
+                <div class="topbtn">
+                    <button id="select_all">全选</button>
+                    <button id="del_all">取消</button>
+                    <button id="del_book">删除</button>
+                    <div class="select">
+                        <span>书名或作者:</span>
+                        <input type="text">
+                        <button>搜索</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>编号</td>
+                            <td>图片</td>
+                            <td>书名</td>
+                            <td>作者</td>
+                            <td>编辑</td>
+                            <td>ISBN</td>
+                            <td>出版日期</td>
+                            <td>价格</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody id="book_select"></tbody>
+                </table>
+            </div>
+            <div class="shop_select" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>编号</td>
+                            <td>图片</td>
+                            <td>书名</td>
+                            <td>作者</td>
+                            <td>编辑</td>
+                            <td>ISBN</td>
+                            <td>出版日期</td>
+                            <td>价格</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody id="book_upd"></tbody>
+                </table>
+            </div>
+            <div class="order_list" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>订单号</td>
+                            <td>用户名</td>
+                            <td>书名</td>
+                            <td>作者</td>
+                            <td>数量</td>
+                            <td>总金额</td>
+                            <td>状态</td>
+                            <td>编辑</td>
+                        </tr>
+                    </thead>
+                    <tbody id="orderlist">
+                    </tbody>
+                </table>
+            </div>
+            <div class="user_list" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>用户编号</td>
+                            <td>用户名</td>
+                            <td>邮箱</td>
+                            <td>密保问题</td>
+                            <td>密保答案</td>
+                            <td>余额</td>
+                            <td>编辑</td>
+                        </tr>
+                    </thead>
+                    <tbody id="userlist">
+                    </tbody>
+                </table>
+                <span id="adduser"></span>
+            </div>
+            <div class="admin_list" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>编号</td>
+                            <td>账号</td>
+                            <td>密码</td>
+                            <td>权限</td>
+                            <td>编辑</td>
+                        </tr>
+                    </thead>
+                    <tbody id="adminlist">
+                    </tbody>
+                </table>
+                <span id="addadmin"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var adname = window.sessionStorage["adname"];
+        var adinfo = document.getElementById('adinfo');
+        var button = document.querySelector('.bodybox-part .bodyright .shop_select .topbtn .select button');
+        console.log(adname);
+        adinfo.innerHTML=`管理员:${adname}您好,欢迎您的使用<button>退出</button>`
+        var LeftActive = document.querySelectorAll('.bodybox-part .bodyleft ul li');
+        var quitbtn = document.querySelector('.top-bar button')
+        var book_select = document.getElementById('book_select');
+        var select_all = document.getElementById('select_all');
+        var del_all = document.getElementById('del_all');
+        var del_book = document.getElementById('del_book');
+        var adduser = document.getElementById('adduser');
+        var leftli1 = document.querySelector('.bodybox-part .bodyleft ul li:nth-child(2) ol li:first-child a');
+        var leftli2 = document.querySelector('.bodybox-part .bodyleft ul li:nth-child(2) ol li:nth-child(2) a');
+        var leftli3 = document.querySelector('.bodybox-part .bodyleft ul li:nth-child(2) ol li:nth-child(3) a');
+        var leftli4 = document.querySelectorAll('.bodybox-part .bodyleft ul li:nth-child(3) ol li a');
+        var leftli5 = document.querySelectorAll('.bodybox-part .bodyleft ul li:nth-child(4) ol li a');
+        var leftli6 = document.querySelectorAll('.bodybox-part .bodyleft ul li:nth-child(5) ol li a');
+        // 删除/查询
+        leftli1.onclick = function(){
+            var classlist = document.querySelectorAll('.bodybox-part .bodyright>div');
+            for(var list of classlist){
+                list.style ='display:none'
+            }
+            classlist[1].style = 'display:block';
+            ajax('')
+        }
+        leftli2.onclick = function(){
+            var classlist = document.querySelectorAll('.bodybox-part .bodyright>div');
+            for(var list of classlist){
+                list.style ='display:none'
+            }
+            classlist[1].style = 'display:block';
+            ajax('')
+        }
+        // 更新
+        leftli3.onclick = function(){
+            var classlist = document.querySelectorAll('.bodybox-part .bodyright>div');
+            for(var list of classlist){
+                list.style ='display:none'
+            }
+            classlist[2].style = 'display:block';
+            ajax6();
+        }
+        //订单管理
+        for(var order of leftli4)
+        order.onclick = function(){
+            var classlist = document.querySelectorAll('.bodybox-part .bodyright>div');
+            for(var list of classlist){
+                list.style ='display:none'
+            }
+            classlist[3].style = 'display:block';
+        }
+        // 用户
+        for(var order of leftli5)
+        order.onclick = function(){
+            var classlist = document.querySelectorAll('.bodybox-part .bodyright>div');
+            for(var list of classlist){
+                list.style ='display:none'
+            }
+            classlist[4].style = 'display:block';
+        }
+        // 管理员
+        for(var admin of leftli6)
+        admin.onclick = function(){
+            var classlist = document.querySelectorAll('.bodybox-part .bodyright>div');
+            for(var list of classlist){
+                list.style ='display:none'
+            }
+            classlist[5].style = 'display:block';
+        }
+        // 左侧列表
+        for(key of LeftActive){
+            key.onclick = function(){
+                for(var k of LeftActive){
+                    k.className = k.className.replace(/active/,'')
+                }
+                this.className += 'active';
+            }
+        }
+        // 退出按钮
+        quitbtn.onclick = function(){
+            var msg = `您确定要退出吗`;
+            if (confirm(msg) == true) {
+                window.sessionStorage.setItem("adname",'');
+                window.location.href="./adlogin.html" ;
+            }   
+        }
+        // 全选
+        select_all.onclick = function(){
+            var checked = document.querySelectorAll('.bodybox-part .bodyright .shop_select table input[type="checkbox"]')
+            for(var key of checked){
+                if(key.checked == false){
+                    key.checked = true
+                }
+            }
+        }
+        // 全不选
+        del_all.onclick = function(){
+            var checked = document.querySelectorAll('.bodybox-part .bodyright .shop_select table input[type="checkbox"]')
+            for(var key of checked){
+                if(key.checked == true){
+                    key.checked = false
+                }
+            }
+        }
+        // 搜索按钮
+        button.onclick = function(){
+            var input = document.querySelector('.bodybox-part .bodyright .shop_select .topbtn .select input');
+            ajax(input.value);
+        }
+        // 删除商品(单)
+        function delbook(id,name){
+            // console.log(id,name);
+            var msg = `您确定要删除'${name}'吗`;
+            if (confirm(msg) == true) {
+                ajax2(id);
+            }   
+        }
+        // 删除商品(多)
+        del_book.onclick = function(){
+            var ischeck = document.querySelectorAll('.bodybox-part .bodyright .shop_select table input[type="checkbox"]:checked');
+            var arr = []; 
+            for(var key of ischeck){
+                arr.push(key.parentElement.nextElementSibling.innerHTML*1);
+            }
+            var msg = `您确定要删除所选图书吗`;
+            if (confirm(msg) == true) {
+               ajax3('('+String(arr)+')'); 
+            }   
+        }
+        // 重置
+        function updreset(){
+            ajax6()
+        }
+        //修改按钮
+        function upd(id,i){
+            var updbook = document.querySelectorAll('.bodybox-part .bodyright .shop_select table tbody td input[type=text]');
+            var bookname = updbook[i*4-4].value;
+            var authorname = updbook[i*4-3].value;
+            var edit = updbook[i*4-2].value;
+            var price = updbook[i*4-1].value;
+            ajax7(id,bookname,authorname,edit,price);
+        }
+        // 删除用户
+        function deluser(id,name){
+            var msg = `您确定要删除'${name}'吗`;
+            if (confirm(msg) == true) {
+                ajax12(id);
+            } 
+        }
+        // 添加用户
+        function add(length){
+            if(userlist.innerHTML.indexOf('input')==-1){
+                 userlist.innerHTML += `<tr>
+                            <td>${length+1}</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td>¥<input type="text"></td>
+                            <td><button onclick="subuser()">提交</button></td>
+                        </tr>`
+            } else{
+                alert('请先提交');
+            }
+        }
+        // 提交添加的用户
+        function subuser(){
+            var submit = document.querySelectorAll('.bodybox-part .bodyright .user_list table tbody tr td input');
+            var usname = submit[0].value;
+            var usaddress = submit[1].value;
+            var usque = submit[2].value;
+            var usans = submit[3].value;
+            var usmon = submit[4].value;
+            ajax13(usname,usaddress,usque,usans,usmon);
+        }
+        // 添加管理员
+        function addad(length){
+            if(adminlist.innerHTML.indexOf('input')==-1){
+                adminlist.innerHTML += `<tr>
+                            <td>${length+1}</td>
+                            <td><input type="text"></td>
+                            <td><input type="password"></td>
+                            <td><input type="text"></td>
+                            <td><button onclick="subadmin()">提交</button></td>
+                        </tr>`
+            } else{
+                alert('请先提交');
+            }
+        }
+        // 提交添加的管理员
+        function subadmin(){
+            var submit = document.querySelectorAll('.bodybox-part .bodyright .admin_list table tbody tr td input');
+            var adname = submit[0].value;
+            var adpassword = submit[1].value;
+            var adpower = submit[2].value;
+            ajax15(adname,adpassword,adpower);
+        }
+        // 删除管理员
+        function deladmin(id,name){
+            var msg = `您确定要删除'${name}'管理员吗`;
+            if (confirm(msg) == true) {
+                ajax16(id);
+            } 
+        }
+        //图书列表
+        function ajax(input){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4){
+                    if(xhr.status>=200&&xhr.status<300){
+                        var result = JSON.parse(xhr.responseText);
+                        console.log(result.data);
+                        var str = ''
+                        for(key of result.data){
+                            str+=`<tr>
+                            <td><input type="checkbox"></td>
+                            <td>${key.bo_id}</td>
+                            <td><img src="../${key.bo_pic}"></td>
+                            <td>${key.bo_name}</td>
+                            <td>${key.bo_author}</td>
+                            <td>${key.bo_edit}</td>
+                            <td>${key.bo_ISBN}</td>
+                            <td>${key.bo_data.slice(0,10)}</td>
+                            <td>¥${key.bo_price}</td>
+                            <td><button onclick="delbook(${key.bo_id},'${key.bo_name}')">删除</button></td>
+                        </tr>`
+                        }
+                        book_select.innerHTML = str;
+                    }else{
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('get', `/control/select_book?input=${input}`,true);
+            xhr.send();
+        }
+        ajax('');
+        // 删除图书(单)
+        function ajax2(id){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        ajax('');
+                        alert("删除成功")
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('post', `/control/deletebook`, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhr.send(`id=${id}`);
+        }
+         // 删除图书(多)
+        function ajax3(str){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    ajax('');
+                    alert("删除成功")
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/control/doubook`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`str=${str}`);
+        }
+        function ajax6(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4){
+                    if(xhr.status>=200&&xhr.status<300){
+                        var result = JSON.parse(xhr.responseText);
+                        console.log(result.data);
+                        var str = ''
+                        var i = 0;
+                        for(key of result.data){
+                            i++;
+                            str+=`<tr>
+                            <td>${key.bo_id}</td>
+                            <td><img src="../${key.bo_pic}"></td>
+                            <td><input type="text" value="${key.bo_name}"></td>
+                            <td><input type="text" value="${key.bo_author}"></td>
+                            <td><input type="text" value="${key.bo_edit}"></td>
+                            <td>${key.bo_ISBN}</td>
+                            <td>${key.bo_data.slice(0,10)}</td>
+                            <td>¥<input type="text" value="${key.bo_price}"></td>
+                            <td><button onclick="upd(${key.bo_id},${i})">修改</button><button onclick="updreset()">重置</button></td>
+                        </tr>`
+                        }
+                        book_upd.innerHTML = str;
+                        // var updbook = document.querySelectorAll('.bodybox-part .bodyright .shop_select table tbody td input[type=text]')
+                        // console.log(updbook);
+                    }else{
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('get', `/control/upd_book`,true);
+            xhr.send();
+        }
+        ajax6();
+        // 图书信息更新
+        function ajax7(id,bookname,authorname,edit,price){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        ajax6();
+                        alert("更新成功")
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('post', `/control/updbook`, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhr.send(`id=${id}&bookname=${bookname}&authorname=${authorname}&edit=${edit}&price=${price}`);
+        }
+        // 订单管理
+        function ajax8(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4){
+                    if(xhr.status>=200&&xhr.status<300){
+                        var result = JSON.parse(xhr.responseText);
+                        // console.log(result.data);
+                        var str = ''
+                        for(key of result.data){
+                            str+=`<tr>
+                            <td>${key.uo_id}</td>
+                            <td>${key.us_name}</td>
+                            <td>${key.bo_name}</td>
+                            <td>${key.bo_author}</td>
+                            <td>${key.bo_sum}</td>
+                            <td>¥${key.uo_money}</td>
+                            <td>${key.bo_status}</td>
+                            <td><button onclick="ajax10(${key.uo_id})">删除</button><button onclick="ajax9(${key.uo_id})">发货</button></td>
+                        </tr>`
+                        }
+                        orderlist.innerHTML = str;
+                    }else{
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('get', `/control/orderlist`,true);
+            xhr.send();
+        }
+        ajax8()
+        //修改订单
+        function ajax9(uo_id){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        ajax8();
+                        alert("修改成功")
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('post', `/control/updorder`, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhr.send(`uo_id=${uo_id}`);
+        }
+        //删除订单
+        function ajax10(uo_id){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        ajax8();
+                        alert("删除成功")
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('post', `/control/delorder`, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhr.send(`uo_id=${uo_id}`);
+        }
+        // 用户管理
+        function ajax11(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4){
+                    if(xhr.status>=200&&xhr.status<300){
+                        var result = JSON.parse(xhr.responseText);
+                        console.log(result.data);
+                        var str = ''
+                        for(key of result.data){
+                            str+=`<tr>
+                            <td>${key.us_id}</td>
+                            <td>${key.us_name}</td>
+                            <td>${key.us_address}</td>
+                            <td>${key.us_question}</td>
+                            <td>${key.us_answer}</td>
+                            <td>¥${key.us_price}</td>
+                            <td><button onclick="deluser(${key.us_id},'${key.us_name}')">删除</button></td>
+                        </tr>`
+                        }
+                        userlist.innerHTML = str
+                        adduser.innerHTML = `<button onclick="add(${result.data[result.data.length-1].us_id})">添加</button>`;
+                    }else{
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('get', `/control/userlist`,true);
+            xhr.send();
+        }
+        ajax11()
+        // 删除用户
+        function ajax12(id){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        ajax11();
+                        alert("删除成功")
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('post', `/control/deluser`, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhr.send(`id=${id}`);
+        }
+        // 添加用户
+        function ajax13(usname,usaddress,usque,usans,usmon){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        ajax11();
+                        alert("添加成功")
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('post', `/control/adduser`, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhr.send(`usname=${usname}&usaddress=${usaddress}&usque=${usque}&usans=${usans}&usmon=${usmon}`);
+        }
+        //管理员信息
+        function ajax14(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4){
+                    if(xhr.status>=200&&xhr.status<300){
+                        var result = JSON.parse(xhr.responseText);
+                        console.log(result.data);
+                        var str = ''
+                        for(key of result.data){
+                            str+=`<tr>
+                            <td>${key.ad_id}</td>
+                            <td>${key.ad_name}</td>
+                            <td>******</td>
+                            <td>${key.ad_power}</td>
+                            <td><button onclick="deladmin(${key.ad_id},'${key.ad_name}')">删除</button></td>
+                        </tr>`
+                        }
+                        adminlist.innerHTML = str
+                        addadmin.innerHTML = `<button onclick="addad(${result.data[result.data.length-1].ad_id})">添加</button>`;
+                    }else{
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('get', `/control/adminlist`,true);
+            xhr.send();
+        }
+        ajax14()
+        // 添加管理员
+        function ajax15(adname,adpassword,adpower){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        ajax14();
+                        alert("添加成功")
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('post', `/control/addadmin`, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhr.send(`adname=${adname}&adpassword=${adpassword}&adpower=${adpower}`);
+        }
+        // 删除管理员
+        function ajax16(id){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        ajax14();
+                        alert("删除成功")
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('post', `/control/deladmin`, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhr.send(`id=${id}`);
+        }
+    </script>
+</body>
+</html>

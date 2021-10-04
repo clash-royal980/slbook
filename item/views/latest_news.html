@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cssReset.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footbar.css">
+    <link rel="stylesheet" href="./css/latest_news.css">
+</head>
+<style>
+    .topbar-part {
+        height: 80px;
+    }
+
+    .topbar-part .container img:first-child {
+        float: left;
+    }
+
+    .topbar-part .container img:nth-child(2) {
+        float: right;
+        /* margin-top: 20px; */
+        width: 320px;
+    }
+</style>
+
+<body>
+    <div class="topbar-part">
+        <div class="container">
+            <img src="./img/topbar/logotitle.jpg" alt="">
+            <img src="./img/topbar/dhtitle.jpg" alt="">
+        </div>
+    </div>
+    <div class="navbar-part">
+        <div class="navbox">
+            <div class="container clearfix">
+                <div class="navbar-left">
+                    <ul>
+                        <li><a href="./index.html">首页</a></li>
+                        <li><a href="./overview_intro.html">概览<div class="down"></div></a>
+                            <div class="downlist1">
+                                <ol class="clearfix">
+                                    <li><a href="./overview_intro.html">三联简介</a></li>
+                                    <li><a href="./overview_historical.html">发展历程</a></li>
+                                    <li><a href="#">领导介绍</a></li>
+                                    <li><a href="./overview_organization.html">组织结构</a></li>
+                                    <li><a href="#">荣誉</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="active"><a href="#">新闻<div class="down"></div></a>
+                            <div class="downlist1">
+                                <ol class="clearfix">
+                                    <li><a href="#">最新资讯</a></li>
+                                    <li><a href="./notice.html">公告动态</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li><a href="./book.html">图书</a></li>
+                        <li><a href="#">刊群<div class="down"></div></a>
+                            <div class="downlist1">
+                                <ol class="clearfix">
+                                    <li><a href="#">读书</a></li>
+                                    <li><a href="#">三联生活周刊</a></li>
+                                    <li><a href="#">新知</a></li>
+                                    <li><a href="#">三联爱乐</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li><a href="./shop_hours.html">门店<div class="down"></div></a>
+                            <div class="downlist1 downlast">
+                                <ol class="clearfix">
+                                    <li><a href="./shop_hours.html">三联韬奋24小时书店</a></li>
+                                    <li><a href="./shop_haidian.html">海淀分店</a></li>
+                                    <li><a href="./shop_center.html">北京政务中心店</a></li>
+                                    <li><a href="./shop_chengdu.html">成都分店</a></li>
+                                    <li><a href="./shop_slt.html">三里屯分店</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li><a href="./author.html">作者</a></li>
+                        <li><a href="./login.html">读者</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <a href="#"><img src="./img/navbar/douban.png" alt=""></a>
+                    <a href="#" a><img src="./img/navbar/mao.png" alt=""></a>
+                    <a href="#"><img src="./img/navbar/weibo.png" alt=""></a>
+                    <a href="#"><img src="./img/navbar/weixin.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="latest_news-part">
+        <div class="container"><img src="./img/banner1.jpg" alt="" class="latest_news-top">
+            <div class="breadnav">
+                <div class="breadbox">
+                    <img src="./img/home.png" alt="">
+                    <span><a href="./index.html">首页</a></span>
+                    <span>最新资讯</span>
+                </div>
+            </div>
+            <div id="mylist"></div>
+            <div id="mybtn"></div> 
+        </div>
+    </div>
+    <div class="footbar-part">
+        <div class="container">
+            <div class="foot-left">
+                <img src="./img/footbar/logo.png" alt="">
+            </div>
+            <div class="foot-right">
+                <p>地址：中国北京美术馆东街22号 100010 | 电话：8610-64001122</p>
+                <p>Copyright © 2013 SDX Joint Publishing Company.All rights Reserved</p>
+                <p>生活·读书·新知三联书店版权所有 | 技术支持：云章科技 </p>
+                <p>ICP备 案 号：京ICP备12011204号-3</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function btn(num) {
+            ajax((num - 1) * 5);
+        }
+        var mynews = document.getElementById('mylist');
+        function ajax(start = 0) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var result = JSON.parse(xhr.responseText);
+                        console.log(result.data);
+                        var str = '';
+                        for (var key of result.data) {
+                            str += `  <div  class="newlist">
+                                    <img src="./${key.ln_pic}" alt="">
+                                    <div class="newright">
+                                    <a href="./news_list.html?${key.ln_id}" target=_blank>${key.ln_title}</a>
+                                    <p>${key.ln_data.slice(0, 10)}</p>
+                                    <p><a href="./news_list.html?${key.ln_id}"><详情..></a></p>
+                                    </div>
+                                    </div>
+                                `;
+                        }
+                        mynews.innerHTML = str;
+                        var n = Math.ceil(result.len / 5);
+                        var str1 = '<button>«</button>';
+                        for (var j = 1; j <= n; j++) {
+                            str1 += `<button onclick=btn(${j})>${j}</button>`;
+                        }
+                        str1 += `<button>»</button>`;
+                        mybtn.innerHTML = str1;
+                        var btns = document.querySelectorAll('.latest_news-part #mybtn button');
+                        console.log(btns);
+                        var btns = document.querySelectorAll('.latest_news-part #mybtn button');
+                        btns[start/5+1].className = `active`;
+                        if(start/5+1==1){btns[0].disabled=true;btns[0].style.cursor='not-allowed'}
+                        console.log(start/5+1);
+                        console.log(n);
+                        if(start/5+1==n){btns[n+1].disabled=true;btns[n+1].style.cursor='not-allowed'}
+                        btns[0].onclick = function(){
+                            btn(start/5);
+                        }
+                        btns[n+1].onclick = function(){
+                            btn(start/5+2);
+                        }
+                    } else {
+                        console.log('返回错误');
+                    }
+                }
+            }
+            xhr.open('get', `/news/latest_news?start=${start}`, true);
+            xhr.send();
+        }
+        ajax();
+    </script>
+</body>
+
+</html>

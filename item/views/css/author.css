@@ -1,0 +1,120 @@
+.author-part{
+    margin-bottom: 200px;
+}
+.author-part .author-top{
+    width: 100%;
+    display: block;
+}
+.author-part .breadnav{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e6effa;
+}
+.author-part .breadnav .breadbox{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.author-part .breadnav .breadbox img{
+    padding-right: 5px;
+}
+.author-part .breadnav .breadbox span{
+    padding-right: 5px;
+}
+.author-part .breadnav .breadbox span::before{
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+.author-part .breadnav .breadbox span:last-child{
+    color: #777;
+}
+.author-part .select_list{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    border-bottom: 2px solid #959595;
+}
+.author-part .select_list .selectbox{
+    display: flex;
+    align-items: center;
+}
+.author-part .select_list .selectbox input{
+    height: 20px;
+    padding: 6px 6px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.author-part .select_list .selectbox button{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+.author-part .imgbox{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.author-part .imgbox .item{
+    height: 300px;
+}
+.author-part .imgbox .item img{
+    width: 203px;
+    height: 234px;
+}
+.author-part .imgbox .item p{
+    text-align: center;
+}
+.author-part #mybtn{
+    text-align: center;
+}
+.author-part #mybtn button{
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.author-part #mybtn .active{
+    background-color: #428bca;
+    border-color: #428bca;
+    color: #fff;
+}
+/* .author-part .container #mybtns {
+    position: relative;
+}
+.author-part .container #mybtns >button:first-child{
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 330px;
+}
+.author-part .container .mybtns >button:nth-child(3){
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 636px;
+} */

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cssReset.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footbar.css">
+</head>
+<style>
+    .topbar-part{
+        height: 80px;
+    }
+    .topbar-part .container img:first-child{
+      float: left;
+    }
+    .topbar-part .container img:nth-child(2){
+      float: right;
+      /* margin-top: 20px; */
+      width: 320px;
+    }
+    .organization-part{
+    margin-bottom: 200px;
+}
+    .organization-part .organization-top{
+        width: 100%;
+        display: block;
+    }
+    .organization-part .breadnav{
+        margin-top: 20px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #e6effa;
+    }
+    .organization-part .breadnav .breadbox{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+    .organization-part .breadnav .breadbox img{
+        padding-right: 5px;
+    }
+    .organization-part .breadnav .breadbox span{
+        padding-right: 5px;
+    }
+    .organization-part .breadnav .breadbox span::before{
+        padding: 0 5px;
+        color: #ccc;
+        content: "/\00a0";
+    }
+    .organization-part .breadnav .breadbox span:last-child{
+        color: #777;
+    }
+    .organization-part h2{
+        text-align: center;
+        margin-top: 20px;
+        padding-bottom: 50px;
+        border-bottom: 2px solid #777;
+    }
+    .organization-part strong{
+        margin-top: 30px;
+        line-height: 50px;
+        font-size: 20px;
+        text-align: center;
+        display: block;
+    }
+    .organization-part .bgimg{
+        height: 664px;
+        background-image: url(./img/20201120092731456.jpeg);
+    }
+</style>
+<body>
+    <div class="topbar-part">
+        <div class="container">
+          <img src="./img/topbar/logotitle.jpg" alt="">
+          <img src="./img/topbar/dhtitle.jpg" alt="">
+        </div>
+    </div>
+    <div class="navbar-part">
+        <div class="navbox">
+          <div class="container clearfix">
+            <div class="navbar-left">
+              <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li class="active"><a href="#">概览<div class="down"></div></a>
+                  <div class="downlist1">
+                    <ol class="clearfix">
+                      <li><a href="./overview_organization.html">三联简介</a></li>
+                      <li><a href="./overview_historical.html">发展历程</a></li>
+                      <li><a href="./overview_leader.html">领导介绍</a></li>
+                      <li><a href="#">组织结构</a></li>
+                      <li><a href="#">荣誉</a></li>
+                    </ol>
+                  </div>
+                </li>
+                <li><a href="./latest_news.html">新闻<div class="down"></div></a>
+                  <div class="downlist1">
+                    <ol class="clearfix">
+                      <li><a href="./latest_news.html">最新资讯</a></li>
+                      <li><a href="./notice.html">公告动态</a></li>
+                    </ol>
+                  </div>
+                </li>
+                <li><a href="./book.html">图书</a></li>
+                <li><a href="#">刊群<div class="down"></div></a>
+                  <div class="downlist1">
+                    <ol class="clearfix">
+                      <li><a href="#">读书</a></li>
+                      <li><a href="#">三联生活周刊</a></li>
+                      <li><a href="#">新知</a></li>
+                      <li><a href="#">三联爱乐</a></li>
+                    </ol>
+                  </div>
+                </li>
+                <li><a href="./shop_hours.html">门店<div class="down"></div></a>
+                  <div class="downlist1 downlast">
+                    <ol class="clearfix">
+                      <li><a href="./shop_hours.html">三联韬奋24小时书店</a></li>
+                      <li><a href="./shop_haidian.html">海淀分店</a></li>
+                      <li><a href="./shop_center.html">北京政务中心店</a></li>
+                      <li><a href="./shop_chengdu.html">成都分店</a></li>
+                      <li><a href="./shop_slt.html">三里屯分店</a></li>
+                    </ol>
+                  </div>
+                </li>
+                <li><a href="./author.html">作者</a></li>
+                <li><a href="./login.html">读者</a></li>
+              </ul>
+            </div>
+            <div class="navbar-right">
+              <a href="#"><img src="./img/navbar/douban.png" alt=""></a>
+              <a href="#" a><img src="./img/navbar/mao.png" alt=""></a>
+              <a href="#"><img src="./img/navbar/weibo.png" alt=""></a>
+              <a href="#"><img src="./img/navbar/weixin.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="organization-part">
+        <div class="container">
+            <img src="./img/banner1.jpg" alt="" class="organization-top">
+                <div class="breadnav">
+                    <div class="breadbox">
+                        <img src="./img/home.png" alt="">
+                        <span><a href="./index.html">首页</a></span>
+                        <span>机构设置</span>
+                    </div>
+                </div>
+            <h2>机构设置</h2>
+            <strong>生活・读书・新知三联书店有限公司现行组织结构图</strong>
+            <div class="bgimg"></div>
+        </div>
+    </div>
+    <div class="footbar-part">
+        <div class="container">
+            <div class="foot-left">
+                <img src="./img/footbar/logo.png" alt="">
+            </div>
+            <div class="foot-right">
+                <p>地址：中国北京美术馆东街22号 100010  |  电话：8610-64001122</p>
+                <p>Copyright © 2013 SDX Joint Publishing Company.All rights Reserved</p>
+                <p>生活·读书·新知三联书店版权所有 | 技术支持：云章科技 </p>
+                <p>ICP备 案 号：京ICP备12011204号-3</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

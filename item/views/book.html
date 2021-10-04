@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/cssReset.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/footbar.css">
+  <link rel="stylesheet" href="./css/all_book.css">
+</head>
+<style>
+  .topbar-part {
+    height: 80px;
+  }
+
+  .topbar-part .container img:first-child {
+    float: left;
+  }
+
+  .topbar-part .container img:nth-child(2) {
+    float: right;
+    /* margin-top: 20px; */
+    width: 320px;
+  }
+</style>
+
+<body>
+  <div class="topbar-part">
+    <div class="container">
+      <img src="./img/topbar/logotitle.jpg" alt="">
+      <img src="./img/topbar/dhtitle.jpg" alt="">
+    </div>
+  </div>
+  <div class="navbar-part">
+    <div class="navbox">
+      <div class="container clearfix">
+        <div class="navbar-left">
+          <ul>
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./overview_intro.html">概览<div class="down"></div></a>
+              <div class="downlist1">
+                <ol class="clearfix">
+                  <li><a href="./overview_intro.html">三联简介</a></li>
+                  <li><a href="./overview_historical.html">发展历程</a></li>
+                  <li><a href="./overview_leader.html">领导介绍</a></li>
+                  <li><a href="./overview_organization.html">组织结构</a></li>
+                  <li><a href="#">荣誉</a></li>
+                </ol>
+              </div>
+            </li>
+            <li><a href="./latest_news.html">新闻<div class="down"></div></a>
+              <div class="downlist1">
+                <ol class="clearfix">
+                  <li><a href="./latest_news.html">最新资讯</a></li>
+                  <li><a href="./notice.html">公告动态</a></li>
+                </ol>
+              </div>
+            </li>
+            <li class="active"><a href="#">图书</a></li>
+            <li><a href="#">刊群<div class="down"></div></a>
+              <div class="downlist1">
+                <ol class="clearfix">
+                  <li><a href="#">读书</a></li>
+                  <li><a href="#">三联生活周刊</a></li>
+                  <li><a href="#">新知</a></li>
+                  <li><a href="#">三联爱乐</a></li>
+                </ol>
+              </div>
+            </li>
+            <li><a href="./shop_hours.html">门店<div class="down"></div></a>
+              <div class="downlist1 downlast">
+                <ol class="clearfix">
+                  <li><a href="./shop_hours.html">三联韬奋24小时书店</a></li>
+                  <li><a href="./shop_haidian.html">海淀分店</a></li>
+                  <li><a href="./shop_center.html">北京政务中心店</a></li>
+                  <li><a href="./shop_chengdu.html">成都分店</a></li>
+                  <li><a href="./shop_slt.html">三里屯分店</a></li>
+                </ol>
+              </div>
+            </li>
+            <li><a href="./author.html">作者</a></li>
+            <li><a href="./login.html">读者</a></li>
+          </ul>
+        </div>
+        <div class="navbar-right">
+          <a href="#"><img src="./img/navbar/douban.png" alt=""></a>
+          <a href="#" a><img src="./img/navbar/mao.png" alt=""></a>
+          <a href="#"><img src="./img/navbar/weibo.png" alt=""></a>
+          <a href="#"><img src="./img/navbar/weixin.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="all_book-part">
+    <div class="container">
+      <img src="./img/banner1.jpg" alt="" class="all_book-top">
+      <div class="breadnav">
+        <div class="breadbox">
+          <img src="./img/home.png" alt="">
+          <span><a href="./index.html">首页</a></span>
+          <span>图书</span>
+        </div>
+      </div>
+      <div class="book_search">
+        <span>图书查询</span>
+        <select name="search" id="">
+          <option value="bo_name">书名</option>
+          <option value="bo_author">作者</option>
+          <option value="bo_ISBN">ISBN</option>
+        </select>
+        <input type="text" placeholder="书名、作者、ISBN">
+        <button><img src="./img/放大镜.png" alt=""></button>
+      </div>
+      <div class="btnlist">
+        <button name="bo_name">书名</button>
+        <button name="bo_author">作者</button>
+        <button name="bo_data">出版日期</button>
+        <button name="bo_ISBN">ISBN</button>
+        <button name="bo_price">定价</button>
+      </div>
+      <div class="book_list">
+
+      </div>
+      <div id="mybtn"></div>
+    </div>
+  </div>
+  <div class="footbar-part">
+    <div class="container">
+      <div class="foot-left">
+        <img src="./img/footbar/logo.png" alt="">
+      </div>
+      <div class="foot-right">
+        <p>地址：中国北京美术馆东街22号 100010 | 电话：8610-6400142</p>
+        <p>Copyright © 2013 SDX Joint Publishing Company.All rights Reserved</p>
+        <p>生活·读书·新知三联书店版权所有 | 技术支持：云章科技 </p>
+        <p>ICP备 案 号：京ICP备401404号-3</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    var obj = { value: "bo_name", start : 0 , input: "" };
+    var btns = document.querySelectorAll('.all_book-part .btnlist button');
+    var input = document.querySelector('.all_book-part .book_search input');
+    // input.onchange = function () {
+    //   obj.input = this.value;
+    // }
+    for (var key of btns) {
+      key.onclick = function () {
+        var btn = this.innerHTML;
+        if (btn.slice(-1) == '↑') {
+          this.innerHTML = `${btn.slice(0, -1)}↓`;
+          obj[this.name] = "desc";
+        } else if (btn.slice(-1) == '↓') {
+          this.innerHTML = `${btn.slice(0, -1)}`;
+          delete obj[this.name];
+        } else {
+          this.innerHTML = `${btn}↑`;
+          obj[this.name] = "asc";
+        }
+        console.log(obj);
+        ajax(obj);
+      }
+    }
+    var button = document.querySelector('.all_book-part .book_search button');
+    var select = document.querySelector('.all_book-part .book_search select');
+    select.onchange = function () {
+      obj.value = select.value;
+    }
+    button.onclick = function () {
+      obj.input = input.value;
+      input.value = '';
+      obj.start = 0;
+      console.log(obj);
+      ajax(obj);
+    }
+    function btn(num) {
+      obj.start = (num - 1) * 18;
+      ajax(obj);
+    }
+    function ajax(obj) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            var result = JSON.parse(xhr.responseText);
+            console.log(result.data);
+            if (result.data.length == 0) {
+              alert('无搜索结果');
+              return;
+            }
+            var book_list = document.querySelector('.all_book-part .book_list');
+            var str = '';
+            for (var key of result.data) {
+              str += `
+                <div class="item" title="${key.bo_name}">
+                <a href="./book_detailed.html?${key.bo_id}"><img src="./${key.bo_pic}" alt=""></a>
+                <p>${key.bo_name}</p>
+                <p>${key.bo_author}</p>
+                <h4>¥${key.bo_price}元</h4>
+                </div>
+                      `;
+            }
+            book_list.innerHTML = str;
+            var n = Math.ceil(result.len / 18);
+            var str1 = '<button>«</button>';
+            for (var j = 1; j <= n; j++) {
+              str1 += `<button onclick=btn(${j})>${j}</button>`;
+            }
+            str1 += `<button>»</button>`;
+            console.log(str1);
+            mybtn.innerHTML = str1;
+            var btns = document.querySelectorAll('.all_book-part #mybtn button');
+            btns[obj.start / 18 + 1].className = `active`;
+            if (obj.start / 18 + 1 == 1) { btns[0].disabled = true; btns[0].style.cursor = 'not-allowed' }
+            if (obj.start/ 18 + 1 == n) { btns[btns.length - 1].disabled = true; btns[btns.length - 1].style.cursor = 'not-allowed' }
+            btns[0].onclick = function () {
+              btn(obj.start / 18);
+            }
+            btns[btns.length - 1].onclick = function () {
+              btn(obj.start / 18 + 2);
+            }
+          } else {
+            console.log('返回错误');
+          }
+        }
+      }
+      // if(obj.input!==''){obj.start=0;}
+      var strobj = '';
+      for (var k in obj) {
+        strobj += `${k}=${obj[k]}&`;
+      }
+      strobj = strobj.slice(0, -1);
+      console.log(strobj);
+      xhr.open('get', `/news/all_book?${strobj}`, true);
+      xhr.send();
+    }
+    ajax(obj);
+  </script>
+</body>
+
+</html>

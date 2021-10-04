@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cssReset.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footbar.css">
+    <link rel="stylesheet" href="./css/useinfo.css">
+</head>
+<style>
+    .topbar-part {
+        height: 80px;
+    }
+
+    .topbar-part .container img:first-child {
+        float: left;
+    }
+
+    .topbar-part .container img:nth-child(2) {
+        float: right;
+        /* margin-top: 20px; */
+        width: 320px;
+    }
+</style>
+
+<body>
+    <div class="topbar-part">
+        <div class="container">
+            <img src="./img/topbar/logotitle.jpg" alt="">
+            <img src="./img/topbar/dhtitle.jpg" alt="">
+        </div>
+    </div>
+    <div class="navbar-part">
+        <div class="navbox">
+            <div class="container clearfix">
+                <div class="navbar-left">
+                    <ul>
+                        <li><a href="./index.html">首页</a></li>
+                        <li><a href="./overview_intro.html">概览<div class="down"></div></a>
+                            <div class="downlist1">
+                                <ol class="clearfix">
+                                    <li><a href="./overview_intro.html">三联简介</a></li>
+                                    <li><a href="./overview_historical.html">发展历程</a></li>
+                                    <li><a href="./overview_leader.html">领导介绍</a></li>
+                                    <li><a href="./overview_organization.html">组织结构</a></li>
+                                    <li><a href="#">荣誉</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li><a href="./latest_author.html">新闻<div class="down"></div></a>
+                            <div class="downlist1">
+                                <ol class="clearfix">
+                                    <li><a href="./latest_author.html">最新资讯</a></li>
+                                    <li><a href="./notice.html">公告动态</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li><a href="./book.html">图书</a></li>
+                        <li><a href="#">刊群<div class="down"></div></a>
+                            <div class="downlist1">
+                                <ol class="clearfix">
+                                    <li><a href="#">读书</a></li>
+                                    <li><a href="#">三联生活周刊</a></li>
+                                    <li><a href="#">新知</a></li>
+                                    <li><a href="#">三联爱乐</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li><a href="./shop_hours.html">门店<div class="down"></div></a>
+                            <div class="downlist1 downlast">
+                                <ol class="clearfix">
+                                    <li><a href="./shop_hours.html">三联韬奋24小时书店</a></li>
+                                    <li><a href="./shop_haidian.html">海淀分店</a></li>
+                                    <li><a href="./shop_center.html">北京政务中心店</a></li>
+                                    <li><a href="./shop_chengdu.html">成都分店</a></li>
+                                    <li><a href="./shop_slt.html">三里屯分店</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li><a href="./author.html">作者</a></li>
+                        <li class="active"><a href="#">读者</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <a href="#"><img src="./img/navbar/douban.png" alt=""></a>
+                    <a href="#" a><img src="./img/navbar/mao.png" alt=""></a>
+                    <a href="#"><img src="./img/navbar/weibo.png" alt=""></a>
+                    <a href="#"><img src="./img/navbar/weixin.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="userinfo_part">
+        <div class="container">
+            <div class="usebox">
+                <div class="box_left">
+                    <div class="navbox">
+                        <ul>
+                            <li><img src="./img/userinfo/1.gif" alt=""></li>
+                            <li>
+                                <img src="./img/userinfo/2.gif" alt="">
+                                <span>个人资料</span>
+                            </li>
+                            <li>
+                                <img src="./img/userinfo/4.gif" alt="">
+                                <span>购物车</span>
+                            </li>
+                            <li>
+                                <img src="./img/userinfo/3.gif" alt="">
+                                <span>我的订单</span>
+                            </li>
+                            <li>
+                                <img src="./img/userinfo/5.gif" alt="">
+                                <span>修改密码</span>
+                            </li>
+                            <li>
+                                <img src="./img/userinfo/6.gif" alt="">
+                                <span>退出登录</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box_right" style="display: none;">
+                    <strong></strong><span>的个人资料</span>
+                    <table></table>
+                    <div class="submit">
+                        <button id="xiugai">修改注册信息</button>
+                        <button id="again">重新填写</button>
+                    </div>
+                </div>
+                <div class="box_right2">
+                    <div class="topbuy">
+                        <img src="./img/shopping/buystep2.jpg" alt="">
+                        <span>浏览商品</span>
+                        <span>购物车</span>
+                        <span>结算</span>
+                    </div>
+                    <div class="back_money">
+                        <div class="backshop">
+                            <img src="./img/shopping/gwc_8.gif" alt="">
+                            <span>返回上页 继续购物</span>
+                        </div>
+                        <div class="moneyshop">
+                            <img src="./img/shopping/gwc_16.gif" alt="">
+                            <span>就买这些 进结算中心</span>
+                        </div>
+                    </div>
+                    <div class="shoplist">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>图片</td>
+                                    <td>作者</td>
+                                    <td>书名</td>
+                                    <td>单价</td>
+                                    <td>数量</td>
+                                    <td>金额</td>
+                                    <td>编辑</td>
+                                </tr>
+                            </thead>
+                            <tbody id="shoplist">
+                                <!-- <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td><a>-</a><input type="text" disabled value="1"><a>+</a></td>
+                                    <td>7</td>
+                                    <td><button>删除</button></td>
+                                </tr> -->
+                            </tbody>
+                            <tfoot id="count">
+
+                            </tfoot>
+                        </table>
+                        <div class="footbutton">
+                            <img src="./img/userinfo/gwc_28.gif" alt="">
+                            <img src="./img/userinfo/gwc_26.gif" alt="">
+                            <img src="./img/userinfo/gwc_jiesuan.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box_right3" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>图片</td>
+                                <td>作者</td>
+                                <td>书名</td>
+                                <td>单价</td>
+                                <td>数量</td>
+                                <td>小计</td>
+                                <td>状态</td>
+                            </tr>
+                        </thead>
+                        <tbody id="orderlist">
+                            <!-- <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td><a>-</a><input type="text" disabled value="1"><a>+</a></td>
+                                <td>7</td>
+                                <td><button>删除</button></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_right4" style="display: none;">
+                    <div class="updatebox">
+                        <div class="title">修改密码</div>
+                        <table>
+                            <tr>
+                                <td>用户名:</td>
+                                <td><strong></strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>原密码:</td>
+                                <td><input type="password">
+                                    <img src="./img/eye.png" alt="">
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>新密码:</td>
+                                <td><input type="password">
+                                    <img src="./img/eye.png" alt="">
+                                </td>
+                                <td>6-20个字符</td>
+                            </tr>
+                            <tr>
+                                <td>确认密码:</td>
+                                <td><input type="password">
+                                    <img src="./img/eye.png" alt="">
+                                </td>
+                                <td>6-20个字符</td>
+                            </tr>
+                        </table>
+                        <div class="submit">
+                            <button id="right4_xiugai">修改密码</button>
+                            <button id="right4_again">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footbar-part">
+        <div class="container">
+            <div class="foot-left">
+                <img src="./img/footbar/logo.png" alt="">
+            </div>
+            <div class="foot-right">
+                <p>地址：中国北京美术馆东街22号 100010 | 电话：8610-64001122</p>
+                <p>Copyright © 2013 SDX Joint Publishing Company.All rights Reserved</p>
+                <p>生活·读书·新知三联书店版权所有 | 技术支持：云章科技 </p>
+                <p>ICP备 案 号：京ICP备12011204号-3</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var name = document.cookie;
+    // document.cookie = "uname=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    console.log(name);
+    var strong = document.querySelector('.userinfo_part .usebox .box_right strong')
+    var strong2 = document.querySelector('.userinfo_part .usebox .box_right4 strong')
+    strong.innerHTML = name.split("=")[1];
+    strong2.innerHTML = name.split("=")[1];
+    var lis = document.querySelectorAll('.userinfo_part .usebox .box_left .navbox ul li');
+    var box_right = document.querySelector('.userinfo_part .usebox .box_right');
+    var again = document.getElementById("again");
+    var update = document.getElementById("xiugai");
+    var box_right2 = document.querySelector('.userinfo_part .usebox .box_right2');
+    var backshop = document.querySelector('.userinfo_part .usebox .box_right2 .back_money .backshop span')
+    var box2_deleteall = document.querySelector('.userinfo_part .usebox .box_right2 .shoplist .footbutton img:first-child');
+    var box2_submit = document.querySelector(".userinfo_part .usebox .box_right2 .shoplist .footbutton img:last-child");
+    var box_right3 = document.querySelector('.userinfo_part .usebox .box_right3');
+    var box_right4 = document.querySelector('.userinfo_part .usebox .box_right4');
+    var right4_imgs = document.querySelectorAll('.userinfo_part .usebox .box_right4 table td img');
+    var right4_again = document.getElementById("right4_again");
+    var right4_xiugai = document.getElementById("right4_xiugai");
+    var right4_inputs = document.querySelectorAll('.userinfo_part .usebox .box_right4 table tr td input');
+    //重新填写按钮单击事件
+    again.onclick = function () {
+        ajax();
+    }
+    //修改信息按钮单击事件
+    update.onclick = function () {
+        var inputs = document.querySelectorAll('.box_right table tr td input');
+        var add = inputs[1].value;
+        var que = inputs[2].value;
+        var anw = inputs[3].value;
+        ajax2(add, que, anw);
+    }
+    lis[1].onclick = function () {
+        box_right.style.display = `block`;
+        box_right2.style.display = `none`;
+        box_right3.style.display = `none`;
+        box_right4.style.display = `none`;
+    }
+    lis[2].onclick = function () {
+        box_right.style.display = `none`;
+        box_right2.style.display = `block`;
+        box_right3.style.display = `none`;
+        box_right4.style.display = `none`;
+    }
+    lis[3].onclick = function () {
+        box_right.style.display = `none`;
+        box_right2.style.display = `none`;
+        box_right3.style.display = `block`;
+        box_right4.style.display = `none`;
+    }
+    lis[4].onclick = function () {
+        box_right.style.display = `none`;
+        box_right2.style.display = `none`;
+        box_right3.style.display = `none`;
+        box_right4.style.display = `flex`;
+    }
+    lis[5].onclick = function () {
+        var msg = `您确定要退出吗`;
+        if (confirm(msg) == true) {
+            document.cookie = "uname=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+            window.location.href = "./login.html";
+        }
+    }
+    //返回购物(跳转页面)
+    backshop.onclick = function () {
+        window.location.href = "./book.html";
+    }
+    //修改密码text/password切换
+    for (var key of right4_imgs) {
+        key.onmousedown = function () {
+            this.previousElementSibling.type = "text";
+        }
+        key.onmouseup = function () {
+            this.previousElementSibling.type = "password";
+        }
+    }
+    //修改密码重置按钮单击
+    right4_again.onclick = function () {
+        for (var inputs of right4_inputs) {
+            inputs.value = '';
+        }
+    }
+    //修改密码按钮单击事件
+    right4_xiugai.onclick = function () {
+        for (var inputs of right4_inputs) {
+            if ((/^[a-zA-z0-9]{6,20}$/).test(inputs.value) == false) {
+                alert("请输入正确的密码格式");
+                return;
+            }
+        }
+        if (right4_inputs[1].value != right4_inputs[2].value) {
+            alert("两次密码不同");
+            return;
+        }
+        ajax3(name.split("=")[1], right4_inputs[0].value, right4_inputs[1].value)
+    }
+    //清除购物车所有数据
+    box2_deleteall.onclick = function () {
+        var shopping = document.getElementById('shoplist')
+        if (shopping.innerHTML == '') {
+            alert("您还未购买任何商品");
+            return;
+        }
+        var msg = `您确定要清除所有商品吗`;
+        if (confirm(msg) == true) {
+            ajax5();
+        }
+    }
+    //购物车结算
+    box2_submit.onclick = function () {
+        var shopping = document.getElementById('shoplist');
+        if (shopping.innerHTML == '') {
+            alert("您还未购买任何商品");
+            return;
+        }
+        var foot = document.getElementById('count');
+        console.log(foot.children[0].children[2].innerHTML.slice(1));
+        for (var sum = 0; sum < shopping.children.length; sum++) {
+            // console.log(shopping.children[sum].children[0].innerHTML)
+            // console.log(document.cookie.split("=")[1]);
+            ajax8(shopping.children[sum].children[0].innerHTML, document.cookie.split("=")[1])
+        }
+        ajax9(foot.children[0].children[2].innerHTML.slice(1), document.cookie.split("=")[1]);
+    }
+    //商品数量增加
+    function add(index, id) {
+        var spadd = document.querySelectorAll(' .box_right2 .shoplist table tbody td input')
+        if (spadd[index].value < 10) {
+            value = spadd[index].value * 1 + 1;
+            ajax6(value, id);
+        }
+    }
+    //商品数量减少
+    function jian(index, id) {
+        var spadd = document.querySelectorAll(' .box_right2 .shoplist table tbody td input')
+        if (spadd[index].value != 1) {
+            value = spadd[index].value * 1 - 1;
+            ajax6(value, id);
+        }
+    }
+    //用户个人信息
+    function ajax() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var result = JSON.parse(xhr.responseText);
+                    console.log(result.data);
+                    var table = document.querySelector('.userinfo_part .usebox .box_right table');
+                    table.innerHTML = `
+                        <tr>
+                            <td>用户名:</td>
+                            <td>${result.data[0].us_name}</td>
+                        </tr>
+                        <tr>
+                            <td>登录密码:</td>
+                            <td><input type="password" value="${result.data[0].us_password}" disabled></td>
+                        </tr>
+                        <tr>
+                            <td>电子邮箱:</td>
+                            <td><input type="text" value="${result.data[0].us_address}"></td>
+                        </tr>
+                        <tr>
+                            <td>密保问题:</td>
+                            <td><input type="text" value="${result.data[0].us_question}"></td>
+                        </tr>
+                        <tr>
+                            <td>密保答案:</td>
+                            <td><input type="text" value="${result.data[0].us_answer}"></td>
+                        </tr>
+                        <tr>
+                            <td>账号余额:</td>
+                            <td>¥${result.data[0].us_price}</td>
+                        </tr>
+                        `;
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/news/select`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`name=${name.split("=")[1]}`);
+    }
+    ajax();
+    //用户修改信息
+    function ajax2(add, que, anw) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var result = JSON.parse(xhr.responseText);
+                    alert(result.message);
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/news/infoupdate`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`name=${name.split("=")[1]}&add=${add}&que=${que}&anw=${anw}`);
+    }
+    //用户密码修改
+    function ajax3(name, oldpwd, newpwd) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var result = JSON.parse(xhr.responseText);
+                    if (result.code == 2) {
+                        alert("密码输入错误");
+                        right4_inputs[0].value = ''
+                    } else {
+                        alert("修改成功");
+                        right4_inputs[0].value = ''
+                        right4_inputs[1].value = ''
+                        right4_inputs[2].value = ''
+                    }
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/news/pwdupdate`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`name=${name}&oldpwd=${oldpwd}&newpwd=${newpwd}`);
+    }
+    //购物车数据
+    function ajax4() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var result = JSON.parse(xhr.responseText);
+                    var shoplist = document.getElementById('shoplist');
+                    var str = '';
+                    console.log(result.data);
+                    if (result.data.length > 0) {
+                        var sum = 0;
+                        var money = 0;
+                        var index = 0;
+                        for (var key of result.data) {
+                            str += `
+                            <tr>
+                                <td>${key.bo_id}</td>
+                                <td><img src="./${key.bo_pic}"></td>
+                                <td>${key.bo_author}</td>
+                                <td>${key.bo_name}</td>
+                                <td>￥${key.bo_price.toFixed(2)}</td>
+                                <td><a onclick="jian(${index},${key.up_id})">-</a><input type="text" disabled value="${key.bo_sum}"><a onclick="add(${index},${key.up_id})">+</a></td>
+                                <td>￥${(key.bo_price * key.bo_sum).toFixed(2)}</td>
+                                <td><button onclick="ajax7(${key.up_id})">删除</button></td>
+                            </tr>`
+                            sum += key.bo_sum * 1;
+                            money += key.bo_price * key.bo_sum;
+                            index++;
+                        }
+                        shoplist.innerHTML = str;
+                        var count = document.getElementById('count');
+                        count.innerHTML = `
+                        <tr>
+                            <td colspan="5">合计:</td>
+                            <td>${sum}</td>
+                            <td>￥${money.toFixed(2)}</td>
+                            <td></td>
+                        </tr>
+                        `;
+                    } else {
+                        var count = document.getElementById('count');
+                        shoplist.innerHTML = '';
+                        count.innerHTML = '';
+                    }
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('get', `/news/shop_display?name=${document.cookie.split("=")[1]}`, true);
+        xhr.send();
+    }
+    ajax4();
+    //清空购物车
+    function ajax5() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    alert('删除成功');
+                    // window.location.href ='./userinfo.html';
+                    ajax4();
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/news/deleteall`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`name=${name.split("=")[1]}`);
+    }
+    //商品数量修改
+    function ajax6(value, id) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    ajax4();
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/news/updateshop`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`value=${value}&id=${id}`);
+    }
+    //删除指定商品
+    function ajax7(id) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    ajax4();
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/news/deleteshop`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`id=${id}`);
+    }
+    // 提交订单
+    function ajax8(bid, uname) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    ajax10();
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/news/inserorder`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`bid=${bid}&uname=${uname}`);
+    }
+    //金额判断
+    function ajax9(money, name) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var result = JSON.parse(xhr.responseText);
+                    alert(result.message);
+                    ajax4();
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('post', `/news/selmoney`, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(`money=${money}&name=${name}`);
+    }
+    //订单列表
+    function ajax10(name) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var result = JSON.parse(xhr.responseText);
+                    var orderlist = document.getElementById('orderlist');
+                    var str = '';
+                    console.log(result.data);
+                    for (var key of result.data) {
+                        str += `
+                            <tr>
+                                <td>${key.bo_id}</td>
+                                <td><img src="./${key.bo_pic}"></td>
+                                <td>${key.bo_author}</td>
+                                <td>${key.bo_name}</td>
+                                <td>￥${key.bo_price.toFixed(2)}</td>
+                                <td>${key.bo_sum}</td>
+                                <td>￥${key.uo_money}</td>
+                                <td>${key.bo_status}</td>
+                            </tr>`
+                    }
+                    orderlist.innerHTML = str;
+                } else {
+                    console.log('返回错误');
+                }
+            }
+        }
+        xhr.open('get', `/news/shop_order?name=${document.cookie.split("=")[1]}`, true);
+        xhr.send();
+    }
+    ajax10();
+</script>
+
+</html>

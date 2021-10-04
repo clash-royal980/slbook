@@ -1,0 +1,435 @@
+.login-part{  
+    background-image: url(../img/bg.jpg);
+    background-repeat: inherit;
+    /* background-size: 100% 100%; */
+    padding-bottom: 100px;
+    min-width: 1000px;      
+}
+.login-part .login-top{
+    width: 100%;
+    display: block;
+}
+.login-part .breadnav{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e6effa;
+    margin-bottom: 30px;
+}
+.login-part .bo_img{
+    display: block;
+    margin: 0 auto;
+}
+.login-part .breadnav .breadbox{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.login-part .breadnav .breadbox img{
+    padding-right: 5px;
+}
+.login-part .breadnav .breadbox span{
+    padding-right: 5px;
+}
+.login-part .breadnav .breadbox span::before{
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+.login-part .breadnav .breadbox span:last-child{
+    color: #777;
+}
+.login-part .log_res{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+}
+.login-part .log_res .dl{
+    width: 136px;
+    height: 38px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.login-part .log_res .zc{
+    width: 136px;
+    height: 38px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.login-part .log_res .active{
+    border:2px solid #000;
+    border-bottom: 2px solid #566771;
+}
+.login-part .welcome{
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.login-part .user_news{
+    margin-top: 30px;
+    display: flex;
+    height: 550px;
+    align-items: center;
+    background-color: rgba(0,0,0,.3);
+}
+.login-part .forget{
+    margin-top: 30px;
+    height: 550px;
+    background-color: rgba(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.login-part .forget .for_box{
+    border: 1px solid #0C3F90;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+}
+.login-part .forget .forget_que{
+    border: 1px solid #0C3F90;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+}
+.login-part .forget .title{
+    background-color: #0C3F90;
+    border-bottom: 2px solid #2C2C2C;
+    text-align: center;
+}
+.login-part .forget .for_box table{
+    margin: 50px auto;
+    border: 1px solid #000;
+    width: 90%;
+}
+.login-part .forget .forget_que table{
+    margin: 10px auto;
+    border: 1px solid #000;
+    width: 90%;
+}
+.login-part .forget table tr{
+    height: 50px;
+}
+.login-part .forget table tr td{
+    color: #fff;
+    text-align: left;
+    width: 50%;
+    position: relative;
+    vertical-align: middle;
+}
+.login-part .forget table tr td>img{
+    position: absolute;
+    top: 15px;
+    left:180px;
+}
+.login-part .forget table tr td span{
+    color: red;
+}
+.login-part .forget table tr td:first-child{
+    text-align: right;  
+}
+.login-part .forget table tr td button{
+    width: 50px;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+.login-part .forget .for_box table tr:nth-child(2) td{
+    text-align: center;
+}
+.login-part .forget table tr td:only-child{
+    text-align: center;
+}
+.login-part .forget table tr td input{
+    width: 200px;
+	height: 25px;
+	line-height: 40px;
+	border: 1px #f90 solid;
+	border-radius: 10px;
+	/* letter-spacing: 2px; */
+    padding-left: 10px;
+	outline: none;
+}
+.login-part .forget .forget_que .mibao{
+    color: red;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.login-part .user_news .user_login{
+    width: 60%;
+    /* height: 400px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.login-part .user_news .user_login.item{
+    display: none;
+}
+.login-part .user_news .user_register.item{
+    display: none;
+}
+.login-part .user_news .user_register{
+    width: 60%;
+}
+.login-part .user_news .user_register table{
+    margin-left: 25px;
+    /* border: 1px solid #ccc; */
+    height: 475px;
+}
+.login-part .user_news .user_register table td{
+    position: relative;
+}
+.login-part .user_news .user_register table td span{
+    color: red;
+}
+.login-part .user_news .user_register table td:first-child{
+    color: #fff;
+    text-align: right;
+}
+.login-part .user_news .user_register table td:nth-child(2){
+    width: 212px;
+}
+.login-part .user_news .user_register table td:last-child{
+    color: #ccc;
+    text-align: left;
+    width: 200px;
+}
+.login-part .user_news .user_register table td select{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 5px;
+}
+.login-part .user_news .user_register table td textarea{
+    width: 100%;
+    height: 80px;
+    outline: none;
+    resize: none;
+}
+.login-part .user_news .user_register table input{
+    width: 200px;
+	height: 25px;
+	line-height: 40px;
+	border: 1px #f90 solid;
+	border-radius: 10px;
+	/* letter-spacing: 2px; */
+    padding-left: 10px;
+	outline: none;
+	background-repeat: no-repeat;
+	/* background-color: #aaa; */
+}
+/* .login-part .user_news .user_register table input[type="password"]{
+    
+} */
+.login-part .user_news .user_register table td .eyes{
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left:180px;
+}
+.login-part .user_news .user_register table #sure{
+    width: 20px;
+	height: 20px;
+    vertical-align: middle;
+}
+.login-part .user_news .user_register table td label{
+    vertical-align: middle;
+}
+.login-part .user_news .user_register table td button{
+    width: 300px;
+    height: 36px;
+    font-size: 14px;
+    color: #fff;
+    /* background-color: #f0ad4e; */
+    border-color: #eea236;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+.login-part .user_news .user_register table td:last-child{
+    text-align: left;
+}
+.login-part .user_news .user_login .name{
+    height: 50px;
+}
+.login-part .user_news .user_login .password{
+    height: 50px;
+}
+.login-part .user_news .user_login input{
+    width: 350px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px #f90 solid;
+	border-radius: 10px;
+	padding-left:30px;
+	letter-spacing: 2px;
+	outline: none;
+	background-repeat: no-repeat;
+	background-image: url(../img/password.png);
+	background-position: left;
+	background-color: #efefef;
+}
+.login-part .user_news .user_login .name{
+    margin-bottom: 20px;
+}
+.login-part .user_news .user_login .password input{ 
+	background-image: url(../img/password.png);
+}
+.login-part .user_news .user_login .name input{ 
+	background-image: url(../img/user.png);
+}
+.login-part .user_news .user_login .submit{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* .login-part .user_news .user_login .submit strong{
+    margin-left: 20px;
+    cursor: pointer;
+} */
+.login-part .user_news .user_login .submit button{
+    /* margin-right: 40px; */
+    width: 300px;
+    height: 36px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.login-part .user_news .user_login .qqdl{
+    display: block;
+    cursor: pointer;
+    /* margin-left: 150px; */
+}
+.login-part .user_news .user_login a{
+    /* margin-left: 20%; */
+    width: 100%;   
+    /* transform: translateX(-50%); */
+}
+.login-part .user_news .user_login a img{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.login-part .user_news .user_login a span{         
+    position: relative;
+    left: 25%;
+    color: #fff;
+    cursor: pointer;
+}
+.login-part .user_news .right_news{
+    border-left: 1px solid #ccc;
+}
+.login-part .user_news .right_news .top{
+    margin-left: 50px;
+    display: flex;
+}
+.login-part .user_news .right_news .topimg img{
+    vertical-align: top;
+}
+.login-part .user_news .right_news a{
+    color: #03183b;
+}
+.login-part .user_news .right_news .top_right{
+    display: flex;
+    margin-left: 20px;
+    width: 150px;
+    flex-wrap: wrap;
+}
+.login-part .user_news .right_news .top_right .img{
+    display: block;
+    width: 15px;
+    height: 16px;
+    background-image: url(../img/icon_rz.png);
+    background-position: 0 -60px;
+    margin-top: 4px;
+}
+.login-part .user_news .right_news .top_right span{
+    color: #ccc;
+    margin-left: 10px;
+}
+.login-part .user_news .right_news .top_right .gz{
+    color: #fff;
+    width: 50px;
+    height: 20px;
+    background-color: #FD4D58;
+    border: 1px solid #DE2335;
+    font-size:12px;
+    line-height: 20px;
+    padding-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 1px #D86270;
+}
+.login-part .user_news .right_news .content .topf{
+    width: 380px;
+    background-color: #ddd;
+    margin: 0 50px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+/* .login-part .user_news .right_news .content .bottomf{
+    width: 380px;
+    background-color: #ddd;
+    margin: 0 50px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+} */
+.login-part .user_news .right_news .content .text{
+    height: 400px;
+    margin: 0 50px; 
+    overflow: hidden;   
+}
+.login-part .user_news .right_news .content .text .item{
+    border-bottom: 1px dashed #aaa;
+    padding-bottom: 10px;
+    /* transform: translateY(-200px);  */
+    transition:  animation 5s;
+    animation: move 40s linear 5s infinite;    
+}
+.login-part .user_news .right_news .content .text:hover .item{
+    /* animation-play-state: paused; */
+}
+.login-part .user_news .right_news .content .text .item:hover{
+    background-color: rgba(0,0,0,.1);
+}
+.login-part .user_news .right_news .content .text .item p{
+    width: 380px;
+    font-size: 12px;
+    color: #aaa;
+}
+.login-part .user_news .right_news .content .text .item .botdata{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #A9C5D0;   
+}
+.login-part .user_news .right_news .content .text .item .botdata span{
+    cursor: pointer;
+}
+@keyframes move {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-3120px);
+    }
+}

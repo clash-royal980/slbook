@@ -1,0 +1,45 @@
+.shop_hours-part{
+    margin-bottom: 200px;
+}
+.shop_hours-part .shop_hours-top{
+    width: 100%;
+    display: block;
+}
+.shop_hours-part .breadnav{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e6effa;
+}
+.shop_hours-part .breadnav .breadbox{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.shop_hours-part .breadnav .breadbox img{
+    padding-right: 5px;
+}
+.shop_hours-part .breadnav .breadbox span{
+    padding-right: 5px;
+}
+.shop_hours-part .breadnav .breadbox span::before{
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+.shop_hours-part .breadnav .breadbox span:last-child{
+    color: #777;
+}
+.shop_hours-part h2{
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #777;
+}
+.shop_hours-part p{
+    text-indent: 2em;
+    margin-top: 50px;
+    line-height: 40px;
+    /* font-size: 18px; */
+}

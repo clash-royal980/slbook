@@ -1,0 +1,99 @@
+.latest_news-part{
+    margin-bottom: 100px;
+}
+.latest_news-part .latest_news-top{
+    width: 100%;
+    display: block;
+}
+.latest_news-part .breadnav{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e6effa;
+    margin-bottom: 30px;
+}
+.latest_news-part .breadnav .breadbox{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.latest_news-part .breadnav .breadbox img{
+    padding-right: 5px;
+}
+.latest_news-part .breadnav .breadbox span{
+    padding-right: 5px;
+}
+.latest_news-part .breadnav .breadbox span::before{
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+.latest_news-part .breadnav .breadbox span:last-child{
+    color: #777;
+}
+.latest_news-part .newlist{
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #000;    
+    margin-bottom: 30px;
+}
+.latest_news-part .newlist img{
+    width: 220px;
+    height: 130px;
+    display: block;
+}
+.latest_news-part .newlist .newright{
+    margin-left: 30px;
+}
+.latest_news-part .newlist .newright>a{
+    font-weight: 400;
+    font-size: 22px;
+}
+.latest_news-part .newlist .newright p:nth-child(2){
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.latest_news-part .newlist .newright p>a{
+    margin-top: 20px;
+    color: #F89800;
+    display: block;
+}
+.latest_news-part #mybtn{
+    text-align: center;
+}
+.latest_news-part #mybtn button{
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.latest_news-part #mybtn .active{
+    background-color: #428bca;
+    border-color: #428bca;
+}
+.latest_news-part .container .mybtns {
+    position: relative;
+}
+.latest_news-part .container .mybtns >button:first-child{
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 330px;
+}
+.latest_news-part .container .mybtns >button:nth-child(3){
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 636px;
+}

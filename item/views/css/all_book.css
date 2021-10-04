@@ -1,0 +1,126 @@
+.all_book-part{
+    margin-bottom: 100px;
+    background-color: #fff;
+}
+.all_book-part .all_book-top{
+    width: 100%;
+    display: block;
+}
+.all_book-part .breadnav{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e6effa;
+    margin-bottom: 30px;
+}
+.all_book-part .breadnav .breadbox{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.all_book-part .breadnav .breadbox img{
+    padding-right: 5px;
+}
+.all_book-part .breadnav .breadbox span{
+    padding-right: 5px;
+}
+.all_book-part .breadnav .breadbox span::before{
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+.all_book-part .breadnav .breadbox span:last-child{
+    color: #777;
+}
+.all_book-part .book_search{
+    display: flex;
+    align-content: center;
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.all_book-part .book_search span{
+    margin:0 13px;
+    font-size: 20px;
+    color: #ccc;
+    line-height: 30px;
+}
+.all_book-part .book_search select{
+    outline: none;
+    border: 1px solid #66AFE9;
+}
+.all_book-part .book_search input{
+    border: 1px solid #66AFE9;
+    border-left: 0;
+    width: 120px;
+    padding:0 10px;
+}
+.all_book-part .book_search button{
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    border-radius: 4px;
+    /* font-size: 1px; */
+    cursor: pointer;
+    padding: 6px 12px;
+}
+.all_book-part .book_search button img{
+    width: 20px;
+}
+.all_book-part .btnlist{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+}
+.all_book-part .btnlist button{
+    padding: 5px 14px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-right: 3px;
+}
+.all_book-part .btnlist button:hover{
+    background-color: #ddd;
+    color: #357ebd;
+    cursor: pointer;
+}
+.all_book-part .book_list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.all_book-part .book_list .item img{
+    width: 150px;
+    height: 213px;
+    margin: 0 5px;
+}
+.all_book-part .book_list .item p{
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.all_book-part .book_list .item h4{
+    text-align: center;
+    color: #eb4d00;
+}
+.all_book-part #mybtn{
+    text-align: center;
+}
+.all_book-part #mybtn button{
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.all_book-part #mybtn .active{
+    background-color: #428bca;
+    border-color: #428bca;
+    color: #fff;
+}
